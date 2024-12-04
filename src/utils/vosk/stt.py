@@ -11,6 +11,7 @@ rec = vosk.KaldiRecognizer(model, 16000)
 
 # Need to specify the sound device
 
+USB_MIC_DEVICE_INDEX = 0
 
 def vosk_stt():
     # Open PyAudio stream
