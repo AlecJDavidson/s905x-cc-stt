@@ -11,7 +11,7 @@ rec = vosk.KaldiRecognizer(model, 16000)
 
 # Need to specify the sound device
 
-USB_MIC_DEVICE_INDEX = 0
+USB_MIC_DEVICE_INDEX = 0 # current index of the usb mic
 
 def vosk_stt():
     # Open PyAudio stream
@@ -21,10 +21,10 @@ def vosk_stt():
         stream = p.open(
             format=pyaudio.paInt16,
             channels=1,
-            rate=48000,  # Use the default sample rate of your USB mic
+            rate=44100, # Use the default sample rate of your USB mic
             input=True,
             frames_per_buffer=8192,
-            input_device_index=USB_MIC_DEVICE_INDEX,  # Use the USB mic
+            input_device_index=USB_MIC_DEVICE_INDEX, # Use the USB mic
         )
 
         # Open a text file in write mode using a 'with' block
