@@ -3,7 +3,12 @@ import pyaudio
 import json
 
 # Set the model path
-model_path = "models/vosk-model-small-en-us-0.15"  # Update this as needed
+
+# Small Model
+# model_path = "models/vosk-model-small-en-us-0.15"  # Update this as needed
+
+# Bigger Model
+model_path = "models/vosk-model-en-us-0.22"
 model = vosk.Model(model_path)
 
 # Create a recognizer
