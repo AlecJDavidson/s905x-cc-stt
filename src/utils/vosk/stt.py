@@ -28,7 +28,7 @@ def vosk_stt():
         )
 
         # Open a text file in write mode using a 'with' block
-        print("Listening for wake word. Say 'Hey GLaDOS' to continue...")
+        print("Listening for speech, say something!...")
         # Start streaming and recognize speech
         while True:
             data = stream.read(4096, exception_on_overflow=False)
